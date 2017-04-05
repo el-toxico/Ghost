@@ -53,6 +53,13 @@ config = {
         //  },
         // ```
 
+        // Example webhook
+        //
+        // webhook: {
+        //     host: 'prerelease.zyxyz.org',
+        //     path: '/gh/webhook'
+        // },
+
         // #### Database
         // Ghost supports sqlite3 (default), MySQL & PostgreSQL
         database: {

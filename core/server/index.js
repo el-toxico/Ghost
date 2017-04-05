@@ -29,6 +29,7 @@ var express = require('express'),
     apps = require('./apps'),
     xmlrpc = require('./data/xml/xmlrpc'),
     slack = require('./data/slack'),
+    webhook = require('./data/webhook'),
     GhostServer = require('./ghost-server'),
     scheduling = require('./scheduling'),
     dbHash;
@@ -180,7 +181,9 @@ function init(options) {
             // Initialize xmrpc ping
             xmlrpc.listen(),
             // Initialize slack ping
-            slack.listen()
+            slack.listen(),
+            // Initialize webhook ping
+            webhook.listen()
         );
     }).then(function () {
         // Get reference to an express app instance.
